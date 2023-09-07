@@ -1,8 +1,9 @@
-import FriendController from '../../controllers/friendController/FriendControllers.js';
 import { createNavbar } from '../../partials/navbar.js';
 
+import CommunicationController from '../../controllers/communicationController/communicationController.js';
+
 // Create an instance of the FriendController
-const friendController = new FriendController();
+const communicationController = new CommunicationController()
 
 // Flag to track if friends list has been initialized
 let friendsListInitialized = false;
@@ -17,13 +18,13 @@ function renderFriendPage(content) {
 // Define your friend routes using page.js
 page('/friends', () => {
     if (!friendsListInitialized) {
-        friendController.init().then(() => {
-            renderFriendPage(friendController.getFriendsContainer());
-            friendsListInitialized = true; // Set the flag to true
+        communicationController.init().then(() => {
+            renderFriendPage(communicationController.getCommunicationContainer());
+            friendsListInitialized = true;
         });
     } else {
         // Friends list has already been initialized, just render it
-        renderFriendPage(friendController.getFriendsContainer());
+        renderFriendPage(communicationController.getCommunicationContainer());
     }
 });
 

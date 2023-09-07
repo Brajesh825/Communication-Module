@@ -451,41 +451,25 @@ button:hover {
   }
 }
 
-.error-message {
-  color: red;
-  font-size: 14px;
-  margin-top: 5px;
-  max-height: 80px; /* Set a maximum height for the error container */
-  overflow-x: auto; /* Enable horizontal scrolling when content exceeds the width */
-  white-space: nowrap; /* Prevent line wrapping */
-}
-
-.error-message::-webkit-scrollbar {
-  width: 0.1em; /* Set the width of the scrollbar to a very small value */
-}
-
-.error-message::-webkit-scrollbar-thumb {
-  background-color: transparent; /* Hide the scrollbar thumb */
+#communication-controller {
+  display: flex;
+  height: 100vh;
+  background-color: #fff;
 }
 
 /* Friend List Styles */
-/* Friend Container */
 #friend-controller {
   display: flex;
-  height: calc(100vh - 120px );
+  height: 100%;
 }
 
 .friends-list {
   width: 320px; /* Set the width to match WhatsApp's user container */
   max-height: 100%; /* Takes available vertical space */
   overflow-y: auto;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  font-family: var(--font-family);
-  font-size: var(--font-size);
+  background-color: #f5f5f5; /* Customize as needed */
   padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-right: 1px solid #ddd;
 }
 
 .friend-list-item {
@@ -498,11 +482,9 @@ button:hover {
 }
 
 .friend-list-item:hover {
-  background-color: #f0f0f0;
+  background-color: #e0e0e0; /* Light gray on hover */
 }
 
-
-/* Profile Picture */
 .profile-pic {
   width: 40px;
   height: 40px;
@@ -510,7 +492,6 @@ button:hover {
   margin-right: 10px;
 }
 
-/* Friend Name */
 .friend-name {
   flex-grow: 1;
   font-weight: bold;
@@ -519,7 +500,6 @@ button:hover {
   text-overflow: ellipsis;
 }
 
-/* Status Dot */
 .status-dot {
   width: 10px;
   height: 10px;
@@ -527,17 +507,14 @@ button:hover {
   margin-right: 10px;
 }
 
-/* Active Status Dot */
 .active-status .status-dot {
-  background-color: blue; /* Blue dot for active status */
+  background-color: blue;
 }
 
-/* Inactive Status Dot */
 .inactive-status .status-dot {
-  background-color: red; /* Red dot for inactive status */
+  background-color: red;
 }
 
-/* Last Message */
 .friend-last-message {
   flex-grow: 1;
   white-space: nowrap;
@@ -545,17 +522,23 @@ button:hover {
   text-overflow: ellipsis;
 }
 
-/* Chat Container */
-.chat-ui-container {
+/* Chat Container Styles */
+#chat-controller {
   flex: 1;
   display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chat-ui-container {
+  flex: 1;
+  display: block;
   flex-direction: column;
   max-height: calc(100vh - 120px);
   background-color: var(--background-color);
   border-left: 1px solid #ddd;
 }
 
-/* Chat Header */
 .chat-header {
   display: flex;
   align-items: center;
@@ -564,17 +547,14 @@ button:hover {
   border-bottom: 1px solid #ddd;
 }
 
-/* Active Status Dot (Chat Header) */
 .active-status {
   background-color: #000dca; /* Green dot for active status */
 }
 
-/* Inactive Status Dot (Chat Header) */
 .inactive-status {
   background-color: #d60e00; /* Red dot for inactive status */
 }
 
-/* Chat Messages */
 .chat-messages {
   flex-grow: 1;
   list-style-type: none;
@@ -582,7 +562,6 @@ button:hover {
   overflow-y: auto;
 }
 
-/* Chat Message */
 .chat-message {
   background-color: #fff;
   padding: 8px;
@@ -590,7 +569,6 @@ button:hover {
   border-radius: 5px;
 }
 
-/* Chat Input */
 .chat-input {
   display: flex;
   align-items: center;
@@ -599,7 +577,6 @@ button:hover {
   border-top: 1px solid #ddd;
 }
 
-/* Message Input */
 .message-input {
   flex-grow: 1;
   padding: 8px;
@@ -608,7 +585,6 @@ button:hover {
   margin-right: 10px;
 }
 
-/* Send Button */
 .send-button {
   background-color: #4caf50; /* Green send button */
   color: #fff;
@@ -618,12 +594,10 @@ button:hover {
   cursor: pointer;
 }
 
-/* Send Button Hover */
 .send-button:hover {
   background-color: #45a049; /* Darker green on hover */
 }
 
-/* Empty Chat Container */
 .empty-chat-container {
   display: flex;
   flex-direction: column;
@@ -636,30 +610,14 @@ button:hover {
   font-weight: bold;
 }
 
-/* Empty Chat Component */
 .empty-chat-component {
   width: 100%;
   text-align: center;
   margin-top: 20px;
 }
 
-/* ... (previous styles) */
-
-/* Media Query for Mobile */
-@media screen and (max-width: 768px) {
-  .chat-ui-container {
-      display: none; /* Hide the chat UI on mobile by default */
-  }
-
-  /* Show the chat UI when the chat-toggle-button is active */
-  #friend-controller.chat-open .chat-ui-container {
-      display: flex;
-  }
-
-}
-
-/* CSS for the chat toggle button */
-.chat-toggle-button {
+/* Chat Toggle Button */
+hat-toggle-button {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -676,12 +634,27 @@ button:hover {
   z-index: 999; /* Place it above other elements */
 }
 
-/* Media query to show the button only on mobile devices */
+/* Media query to show the button on smaller screens */
 @media screen and (max-width: 768px) {
   .chat-toggle-button {
-      display: block; /* Show the button on mobile screens */
+    display: block; /* Show the button on mobile screens */
   }
+
+  .chat-ui-container {
+    
+    flex: 1;
+    display: none;
+    max-height: calc(100vh);
+  }
+  
+  
 }
+
+
+
+
+
+
 
 label[for="attachment-input"] {
   display: inline-block;
@@ -701,3 +674,4 @@ label[for="attachment-input"]:hover {
 #attachment-input {
   display: none;
 }
+
