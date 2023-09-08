@@ -5,10 +5,11 @@ class AuthService {
         this.authAPI = new AuthAPI();
     }
 
-    async login(username, password) {
+    async login(credentials) {
         try {
             // Call the login method from the AuthAPI
-            const response = await this.authAPI.login(username, password);
+            const response = await this.authAPI.login(credentials.username, credentials.password);
+
             // Handle the login response as needed
             return response;
         } catch (error) {
@@ -17,10 +18,11 @@ class AuthService {
         }
     }
 
-    async signup(username, password) {
+    async signup(username, password, email, name) {
         try {
             // Call the signup method from the AuthAPI
-            const response = await this.authAPI.signup(username, password);
+            const response = await this.authAPI.signup(username, password, email, name);
+
             // Handle the signup response as needed
             return response;
         } catch (error) {
@@ -39,6 +41,11 @@ class AuthService {
             console.error("AuthService - Logout error:", error);
             throw error; // Propagate the error
         }
+    }
+
+    async isLoggedin(){
+        const currentUser = await this.authAPI.getCurrentUser();
+        return currentUser
     }
 
     // Other authentication-related methods can be added here

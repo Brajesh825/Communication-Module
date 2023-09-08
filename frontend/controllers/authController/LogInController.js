@@ -27,11 +27,12 @@ class LoginController {
 
         try {
             const response = await this.authService.login(loginData);
-
             // Check if the login was successful based on the response (adjust as needed)
-            if (response.success) {
+            if (response.token) {
                 this.isLoggedIn = true;
-                window.location.href = "/"; // Redirect to the home page
+                document.cookie = `token=${response.token}; path=/`;
+                window.location.href = "/friends"; // Redirect to the home page
+                return
             } else {
                 this.isLoggedIn = false;
                 // Handle login failure (display error message, etc.)
@@ -79,7 +80,7 @@ class LoginController {
             inputElement.required = true;  // Making fields required
     
             if (name === "username") {
-                inputElement.pattern = "^[a-zA-Z0-9]+$";
+                // inputElement.pattern = "^[a-zA-Z0-9]+$";
                 inputElement.title = "Username can only contain alphanumeric characters";
             }
     

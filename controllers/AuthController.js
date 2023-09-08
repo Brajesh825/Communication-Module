@@ -15,6 +15,7 @@ class AuthController {
     async login(req, res) {
         try {
             const { username, password } = req.body;
+            console.log(username);
             const token = await authService.login(username, password);
             if (token) {
                 res.json({ token });
