@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon app.js",
+    "dev": "nodemon server.js",
     "test": "mocha tests/test.js --reporter json --reporter-options output=./tests/test-results.json"
   },
   "author": "",

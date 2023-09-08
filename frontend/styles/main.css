@@ -188,102 +188,6 @@
 }
 
 /* Windows XP Theme */
-.windows-xp-theme {
-  /* Background colors */
-  --background-color: #316AC5; /* Windows XP blue background */
-  --text-color: #000; /* Text color */
-  --nav-background-color: #316AC5; /* Windows XP blue for navigation bar */
-  --nav-text-color: #fff; /* White text color for navigation links */
-  --nav-active-color: #ff6600; /* Orange accent color for active link in navigation */
-  --font-family: 'Tahoma', sans-serif; /* Font family similar to Windows XP */
-  --font-weight: normal; /* Font weight */
-  --font-style: normal; /* Font style */
-  --font-size: 16px; /* Font size */
-}
-
-/* Windows XP Taskbar */
-.windows-xp-theme .taskbar {
-  background-color: #316AC5; /* Windows XP blue taskbar */
-  color: #fff; /* White text color for taskbar icons */
-}
-
-/* Windows XP Start Button */
-.windows-xp-theme .start-button {
-  background-color: #316AC5; /* Windows XP blue start button */
-  color: #fff; /* White text color for start button text */
-}
-
-/* Windows XP Start Menu */
-.windows-xp-theme .start-menu {
-  background-color: #fff; /* White start menu background */
-  color: #000; /* Black text color for start menu items */
-}
-
-/* Windows XP Window */
-.windows-xp-theme .window {
-  background-color: #fff; /* White window background */
-  color: #000; /* Black text color for window content */
-  border: 1px solid #316AC5; /* Windows XP window border */
-}
-
-/* Windows XP Window Title Bar */
-.windows-xp-theme .window-title-bar {
-  background-color: #316AC5; /* Windows XP blue title bar */
-  color: #fff; /* White text color for window title text */
-}
-
-/* Windows XP Buttons */
-.windows-xp-theme .button {
-  background-color: #316AC5; /* Windows XP blue buttons */
-  color: #fff; /* White text color for button text */
-}
-
-/* Windows XP Button Hover */
-.windows-xp-theme .button:hover {
-  background-color: #0078D4; /* Darker blue on hover */
-}
-
-/* Windows XP Icons */
-.windows-xp-theme .icon {
-  color: #316AC5; /* Windows XP blue icon color */
-}
-
-/* Windows XP Desktop Wallpaper */
-.windows-xp-theme .desktop {
-  background-image: url('path/to/windows-xp-wallpaper.jpg'); /* Windows XP wallpaper image */
-  background-size: cover;
-}
-
-/* Windows XP Start Menu Icon */
-.windows-xp-theme .start-menu-icon {
-  color: #fff; /* White icon color for start menu items */
-}
-
-/* Windows XP Start Menu Icon Hover */
-.windows-xp-theme .start-menu-icon:hover {
-  background-color: #316AC5; /* Windows XP blue on hover */
-}
-
-.whatsapp-dark-theme {
-  --background-color: #000;
-  /* Dark background color for the body */
-  --text-color: #fff;
-  /* Light text color for content */
-  --nav-background-color: #333;
-  /* Background color for the navigation bar */
-  --nav-text-color: #ffebeb;
-  /* Light text color for navigation links */
-  --nav-active-color: #ff6600;
-  /* Accent color for active link in navigation */
-  --font-family: 'Courier New', monospace;
-  /* Font family */
-  --font-weight: normal;
-  /* Font weight */
-  --font-style: normal;
-  /* Font style */
-  --font-size: 16px;
-  /* Font size */
-}
 
 .whatsapp-light-theme {
   --background-color: #fff;
@@ -387,7 +291,6 @@ nav a.active {
   display: inline;
 }
 
-/* Theme toggle button styles */
 .theme-toggle {
   cursor: pointer;
   display: flex;
@@ -397,20 +300,58 @@ nav a.active {
 
 /* Theme toggle button icon styles */
 .theme-toggle i {
-  font-size: 1.5rem;
-  /* Adjust the size of the theme icon */
+  font-size: 1.5rem; /* Adjust the size of the theme icon */
+  border: 1px solid var(--nav-text-color); /* Add a border for the icon */
+  border-radius: 50%; /* Make the icon rounded */
+  padding: 0.25rem; /* Add some padding for spacing */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Dark mode button styles */
 button {
-  background-color: var(--nav-background-color);
-  /* Use the same background color as the navigation bar */
+  background-color: var(--nav-background-color); /* Use the same background color as the navigation bar */
   color: var(--nav-text-color);
   padding: 10px 20px;
-  font-size: var(--font-size);
-  /* Apply font-size */
+  font-size: var(--font-size); /* Apply font-size */
   font-weight: bold;
 }
+
+/* Hamburger button styles */
+.hamburger-button {
+  display: none; /* Hide the hamburger button by default */
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin-right: 1rem; /* Add some margin to separate it from other links */
+
+  @media screen and (max-width: 768px) {
+    /* Show the hamburger button on screens with a maximum width of 768px (adjust as needed) */
+    display: block;
+  }
+
+}
+
+.navbar-list.collapsed {
+  display: block;
+  @media screen and (max-width: 768px) {
+    /* Show the hamburger button on screens with a maximum width of 768px (adjust as needed) */
+    display: none;
+  }
+}
+
+/* Hamburger bar styles */
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--nav-text-color);
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
 
 
 /* Tablet */

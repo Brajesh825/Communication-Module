@@ -1,4 +1,4 @@
-import { NavLink } from "../../utils/navlink.js";
+import { NavLink } from "../utils/navlink.js";
 
 export function createNavbar() {
     const navElement = document.createElement('nav');
@@ -14,6 +14,7 @@ export function createNavbar() {
     // Create a <ul> element
     const ulElement = document.createElement('ul');
     ulElement.classList.add('navbar-list'); // Add a class for styling
+    ulElement.classList.add('collapsed'); // Add a class for styling
 
     // Append NavLink elements to the <ul>
     ulElement.appendChild(homeLink.getElement());
@@ -38,30 +39,49 @@ export function createNavbar() {
     // Function to toggle the theme
     function toggleTheme() {
         const body = document.body;
-        const themes = ['light-theme', 'dark-theme', 'skyblue-theme', 'blood-red-theme','neon-theme' , 'darkest-dark-theme' , 'lightest-light-theme' , 'windows-xp-theme' , ".whatsapp-dark-theme" , ".whatsapp-light-theme"];
-        
+        const themes = ['light-theme', 'dark-theme', 'skyblue-theme', 'blood-red-theme', 'neon-theme', 'darkest-dark-theme', 'lightest-light-theme', 'windows-xp-theme', ".whatsapp-dark-theme", ".whatsapp-light-theme"];
+
         // Get the current theme class
         const currentTheme = themes.find(theme => body.classList.contains(theme));
-    
+
         // Remove the current theme class
         body.classList.remove(currentTheme);
-    
+
         // Choose a random theme (excluding the current one)
         let randomTheme;
         do {
             randomTheme = themes[Math.floor(Math.random() * themes.length)];
         } while (randomTheme === currentTheme);
-    
+
         // Apply the random theme to the body
         body.classList.add(randomTheme);
     }
-    
+
 
     // Attach the toggleTheme function to the theme button's click event
     themeToggleButton.addEventListener('click', toggleTheme);
 
     // Append the <ul> to the <nav>
     navElement.appendChild(ulElement);
+
+    const hamburgerButton = document.createElement('button');
+    hamburgerButton.classList.add('hamburger-button');
+    for (let i = 0; i < 3; i++) {
+        const bar = document.createElement('span');
+        bar.classList.add('bar');
+        hamburgerButton.appendChild(bar);
+    }
+
+    // Append the hamburger button to the <nav>
+    navElement.appendChild(hamburgerButton);
+
+    function toggleNavbar() {
+        const ulElement = navElement.querySelector('ul.navbar-list');
+        ulElement.classList.toggle('collapsed');
+    }
+
+    // Attach the toggleNavbar function to the hamburger button's click event
+    hamburgerButton.addEventListener('click', toggleNavbar);
 
     return navElement;
 }
