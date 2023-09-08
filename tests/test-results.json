@@ -1,0 +1,54 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-09-08T04:19:44.294Z",
+    "end": "2023-09-08T04:19:45.955Z",
+    "duration": 1661
+  },
+  "tests": [
+    {
+      "title": "should sign up a new user",
+      "fullTitle": "User Authentication should sign up a new user",
+      "file": "/home/brajesh/Documents/Communication-Module/tests/test.js",
+      "duration": 284,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should log in an existing user",
+      "fullTitle": "User Authentication should log in an existing user",
+      "file": "/home/brajesh/Documents/Communication-Module/tests/test.js",
+      "duration": 89,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [],
+  "passes": [
+    {
+      "title": "should sign up a new user",
+      "fullTitle": "User Authentication should sign up a new user",
+      "file": "/home/brajesh/Documents/Communication-Module/tests/test.js",
+      "duration": 284,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should log in an existing user",
+      "fullTitle": "User Authentication should log in an existing user",
+      "file": "/home/brajesh/Documents/Communication-Module/tests/test.js",
+      "duration": 89,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    }
+  ]
+}

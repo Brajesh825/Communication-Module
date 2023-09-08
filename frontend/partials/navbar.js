@@ -38,7 +38,7 @@ export function createNavbar() {
     // Function to toggle the theme
     function toggleTheme() {
         const body = document.body;
-        const themes = ['light-theme', 'dark-theme', 'skyblue-theme', 'blood-red-theme','neon-theme'];
+        const themes = ['light-theme', 'dark-theme', 'skyblue-theme', 'blood-red-theme','neon-theme' , 'darkest-dark-theme' , 'lightest-light-theme' , 'windows-xp-theme' , ".whatsapp-dark-theme" , ".whatsapp-light-theme"];
         
         // Get the current theme class
         const currentTheme = themes.find(theme => body.classList.contains(theme));

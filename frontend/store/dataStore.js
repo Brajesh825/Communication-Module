@@ -61,7 +61,7 @@ class DataStore {
     }
 
     // Method to add a message to a specific friend
-    addMessageToFriend(friendId, message) {
+    addMessage(friendId, message) {
         const friend = this.friends.find((friend) => friend.id === friendId);
         if (friend) {
             if (!friend.messages) {

@@ -1,164 +1,415 @@
 /* Default (Light) Theme */
 :root {
-    --background-color: #fff; /* Background color for the body */
-    --text-color: #000; /* Text color */
-    --nav-background-color: #333; /* Background color for the navigation bar */
-    --nav-text-color: #fff; /* Light text color for navigation links */
-    --nav-active-color: #ff6600; /* Accent color for active link in navigation */
-    --font-family: Arial, sans-serif; /* Font family */
-    --font-weight: normal; /* Font weight */
-    --font-style: normal; /* Font style */
-    --font-size: 16px; /* Font size */
+  --background-color: #fff;
+  /* Background color for the body */
+  --text-color: #000;
+  /* Text color */
+  --nav-background-color: #333;
+  /* Background color for the navigation bar */
+  --nav-text-color: #fff;
+  /* Light text color for navigation links */
+  --nav-active-color: #ff6600;
+  /* Accent color for active link in navigation */
+  --font-family: Arial, sans-serif;
+  /* Font family */
+  --font-weight: normal;
+  /* Font weight */
+  --font-style: normal;
+  /* Font style */
+  --font-size: 16px;
+  /* Font size */
 }
 
 /* Dark Theme */
 .dark-theme {
-    --background-color: #333; /* Dark background color for the body */
-    --text-color: #fff; /* Light text color for content */
-    --nav-background-color: #333; /* Background color for the navigation bar */
-    --nav-text-color: #fff; /* Light text color for navigation links */
-    --nav-active-color: #ff6600; /* Accent color for active link in navigation */
-    --font-family: 'Times New Roman', serif; /* Font family */
-    --font-weight: bold; /* Font weight */
-    --font-style: normal; /* Font style */
-    --font-size: 18px; /* Font size */
+  --background-color: #333;
+  /* Dark background color for the body */
+  --text-color: #fff;
+  /* Light text color for content */
+  --nav-background-color: #333;
+  /* Background color for the navigation bar */
+  --nav-text-color: #fff;
+  /* Light text color for navigation links */
+  --nav-active-color: #ff6600;
+  /* Accent color for active link in navigation */
+  --font-family: 'Times New Roman', serif;
+  /* Font family */
+  --font-weight: bold;
+  /* Font weight */
+  --font-style: normal;
+  /* Font style */
+  --font-size: 18px;
+  /* Font size */
 }
 
 /* Sky Blue Theme */
 .skyblue-theme {
-    --background-color: #87CEEB; /* Sky Blue background color for the body */
-    --text-color: #000; /* Text color */
-    --nav-background-color: #4682B4; /* Background color for the navigation bar */
-    --nav-text-color: #fff; /* Light text color for navigation links */
-    --nav-active-color: #FFA500; /* Accent color for active link in navigation */
-    --font-family: 'Verdana', sans-serif; /* Font family */
-    --font-weight: normal; /* Font weight */
-    --font-style: italic; /* Font style */
-    --font-size: 16px; /* Font size */
+  --background-color: #87CEEB;
+  /* Sky Blue background color for the body */
+  --text-color: #000;
+  /* Text color */
+  --nav-background-color: #4682B4;
+  /* Background color for the navigation bar */
+  --nav-text-color: #fff;
+  /* Light text color for navigation links */
+  --nav-active-color: #FFA500;
+  /* Accent color for active link in navigation */
+  --font-family: 'Verdana', sans-serif;
+  /* Font family */
+  --font-weight: normal;
+  /* Font weight */
+  --font-style: italic;
+  /* Font style */
+  --font-size: 16px;
+  /* Font size */
 }
 
 /* Blood Red Theme */
 .blood-red-theme {
-    --background-color: #8B0000; /* Blood Red background color for the body */
-    --text-color: #fff; /* Light text color for content */
-    --nav-background-color: #333; /* Background color for the navigation bar */
-    --nav-text-color: #fff; /* Light text color for navigation links */
-    --nav-active-color: #FF4500; /* Accent color for active link in navigation */
-    --font-family: 'Georgia', serif; /* Font family */
-    --font-weight: normal; /* Font weight */
-    --font-style: normal; /* Font style */
-    --font-size: 16px; /* Font size */
+  --background-color: #8B0000;
+  /* Blood Red background color for the body */
+  --text-color: #fff;
+  /* Light text color for content */
+  --nav-background-color: #333;
+  /* Background color for the navigation bar */
+  --nav-text-color: #fff;
+  /* Light text color for navigation links */
+  --nav-active-color: #FF4500;
+  /* Accent color for active link in navigation */
+  --font-family: 'Georgia', serif;
+  /* Font family */
+  --font-weight: normal;
+  /* Font weight */
+  --font-style: normal;
+  /* Font style */
+  --font-size: 16px;
+  /* Font size */
 }
 
 .neon-theme {
-  --background-color: #1c1c1c; /* Dark background color for the body */
-  --text-color: #0ff; /* Neon text color for content */
-  --nav-background-color: #333; /* Darker background color for the navigation bar */
-  --nav-text-color: #0ff; /* Neon text color for navigation links */
-  --nav-active-color: #f0f; /* Accent color for active link in navigation (Neon Pink) */
-  --font-family: 'Courier New', monospace; /* Font family to give it a retro feel */
-  --font-weight: normal; /* Font weight */
-  --font-style: normal; /* Font style */
-  --font-size: 16px; /* Font size */
-  
+  --background-color: #1c1c1c;
+  /* Dark background color for the body */
+  --text-color: #0ff;
+  /* Neon text color for content */
+  --nav-background-color: #333;
+  /* Darker background color for the navigation bar */
+  --nav-text-color: #0ff;
+  /* Neon text color for navigation links */
+  --nav-active-color: #f0f;
+  /* Accent color for active link in navigation (Neon Pink) */
+  --font-family: 'Courier New', monospace;
+  /* Font family to give it a retro feel */
+  --font-weight: normal;
+  /* Font weight */
+  --font-style: normal;
+  /* Font style */
+  --font-size: 16px;
+  /* Font size */
+
   /* Neon Text Glow effect */
-  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff, 0 0 80px #0ff;
+  text-shadow: 0 0 5px rgb(88, 119, 119), 0 0 10px rgb(0, 0, 0), 0 0 20px #0ff, 0 0 40px #0ff, 0 0 80px #0ff;
 }
 
 .neon-theme button {
-  color: #1c1c1c; /* Make it dark to contrast with the neon background */
+  color: #1c1c1c; /* Set the text color for buttons to dark */
+  /* Make it dark to contrast with the neon background */
 }
+
+/* Darkest Dark Theme */
+.darkest-dark-theme {
+  --background-color: #000;
+  /* Darkest background color for the body */
+  --text-color: #fff;
+  /* Light text color for content */
+  --nav-background-color: #333;
+  /* Background color for the navigation bar */
+  --nav-text-color: #ffebeb;
+  /* Light text color for navigation links */
+  --nav-active-color: #ff6600;
+  /* Accent color for active link in navigation */
+  --font-family: 'Courier New', monospace;
+  /* Font family */
+  --font-weight: normal;
+  /* Font weight */
+  --font-style: normal;
+  /* Font style */
+  --font-size: 16px;
+  /* Font size */
+}
+
+/* Update Chat Container Background */
+.darkest-dark-theme .chat-messages {
+  background-color: var(--background-color); /* Use theme background color */
+}
+
+/* Update Chat Input Background */
+.darkest-dark-theme .chat-input {
+  background-color: #000; /* Darkest background color */
+}
+
+/* Update Message Input Background */
+.darkest-dark-theme .message-input {
+  background-color: #333; /* Dark background color for message input */
+  border: 1px solid #555; /* Dark border color */
+  color: #fff; /* Light text color */
+}
+
+/* Update Send Button Colors */
+.darkest-dark-theme .send-button {
+  background-color: #ff6600; /* Accent color for send button */
+  color: #fff; /* Text color */
+}
+
+/* Update Send Button Hover Color */
+.darkest-dark-theme .send-button:hover {
+  background-color: #ff5500; /* Darker accent color on hover */
+}
+
+/* Lightest Light Theme */
+.lightest-light-theme {
+  --background-color: #fff;
+  /* Lightest background color for the body */
+  --text-color: #000;
+  /* Text color */
+  --nav-background-color: #f0f0f0;
+  /* Background color for the navigation bar */
+  --nav-text-color: #333;
+  /* Text color for navigation links */
+  --nav-active-color: #007bff;
+  /* Accent color for active link in navigation */
+  --font-family: Arial, sans-serif;
+  /* Font family */
+  --font-weight: normal;
+  /* Font weight */
+  --font-style: normal;
+  /* Font style */
+  --font-size: 16px;
+  /* Font size */
+}
+
+/* Windows XP Theme */
+.windows-xp-theme {
+  /* Background colors */
+  --background-color: #316AC5; /* Windows XP blue background */
+  --text-color: #000; /* Text color */
+  --nav-background-color: #316AC5; /* Windows XP blue for navigation bar */
+  --nav-text-color: #fff; /* White text color for navigation links */
+  --nav-active-color: #ff6600; /* Orange accent color for active link in navigation */
+  --font-family: 'Tahoma', sans-serif; /* Font family similar to Windows XP */
+  --font-weight: normal; /* Font weight */
+  --font-style: normal; /* Font style */
+  --font-size: 16px; /* Font size */
+}
+
+/* Windows XP Taskbar */
+.windows-xp-theme .taskbar {
+  background-color: #316AC5; /* Windows XP blue taskbar */
+  color: #fff; /* White text color for taskbar icons */
+}
+
+/* Windows XP Start Button */
+.windows-xp-theme .start-button {
+  background-color: #316AC5; /* Windows XP blue start button */
+  color: #fff; /* White text color for start button text */
+}
+
+/* Windows XP Start Menu */
+.windows-xp-theme .start-menu {
+  background-color: #fff; /* White start menu background */
+  color: #000; /* Black text color for start menu items */
+}
+
+/* Windows XP Window */
+.windows-xp-theme .window {
+  background-color: #fff; /* White window background */
+  color: #000; /* Black text color for window content */
+  border: 1px solid #316AC5; /* Windows XP window border */
+}
+
+/* Windows XP Window Title Bar */
+.windows-xp-theme .window-title-bar {
+  background-color: #316AC5; /* Windows XP blue title bar */
+  color: #fff; /* White text color for window title text */
+}
+
+/* Windows XP Buttons */
+.windows-xp-theme .button {
+  background-color: #316AC5; /* Windows XP blue buttons */
+  color: #fff; /* White text color for button text */
+}
+
+/* Windows XP Button Hover */
+.windows-xp-theme .button:hover {
+  background-color: #0078D4; /* Darker blue on hover */
+}
+
+/* Windows XP Icons */
+.windows-xp-theme .icon {
+  color: #316AC5; /* Windows XP blue icon color */
+}
+
+/* Windows XP Desktop Wallpaper */
+.windows-xp-theme .desktop {
+  background-image: url('path/to/windows-xp-wallpaper.jpg'); /* Windows XP wallpaper image */
+  background-size: cover;
+}
+
+/* Windows XP Start Menu Icon */
+.windows-xp-theme .start-menu-icon {
+  color: #fff; /* White icon color for start menu items */
+}
+
+/* Windows XP Start Menu Icon Hover */
+.windows-xp-theme .start-menu-icon:hover {
+  background-color: #316AC5; /* Windows XP blue on hover */
+}
+
+.whatsapp-dark-theme {
+  --background-color: #000;
+  /* Dark background color for the body */
+  --text-color: #fff;
+  /* Light text color for content */
+  --nav-background-color: #333;
+  /* Background color for the navigation bar */
+  --nav-text-color: #ffebeb;
+  /* Light text color for navigation links */
+  --nav-active-color: #ff6600;
+  /* Accent color for active link in navigation */
+  --font-family: 'Courier New', monospace;
+  /* Font family */
+  --font-weight: normal;
+  /* Font weight */
+  --font-style: normal;
+  /* Font style */
+  --font-size: 16px;
+  /* Font size */
+}
+
+.whatsapp-light-theme {
+  --background-color: #fff;
+  /* Background color for the body */
+  --text-color: #000;
+  /* Text color */
+  --nav-background-color: #0073e6;
+  /* Background color for the navigation bar */
+  --nav-text-color: #fff;
+  /* Light text color for navigation links */
+  --nav-active-color: #25d366;
+  /* Accent color for active link in navigation */
+  --font-family: Arial, sans-serif;
+  /* Font family */
+  --font-weight: normal;
+  /* Font weight */
+  --font-style: normal;
+  /* Font style */
+  --font-size: 16px;
+  /* Font size */
+}
+
 
 /* Add other theme definitions here */
 
 body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: var(--font-family); /* Apply font-family */
-    font-weight: var(--font-weight); /* Apply font-weight */
-    font-style: var(--font-style); /* Apply font-style */
-    font-size: var(--font-size); /* Apply font-size */
-    /* Add other body styles here */
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  /* Apply font-family */
+  font-weight: var(--font-weight);
+  /* Apply font-weight */
+  font-style: var(--font-style);
+  /* Apply font-style */
+  font-size: var(--font-size);
+  /* Apply font-size */
+  /* Add other body styles here */
 }
 
 /* Dark mode navigation bar */
 nav {
-    background-color: var(--nav-background-color);
-    color: var(--nav-text-color);
-    font-size: var(--font-size); /* Apply font-size */
-    padding: 0.625rem 1.25rem; /* 10px top/bottom, 20px left/right in rem units */
-    font-weight: bold;
-    font-family: var(--font-family); /* Apply font-family */
+  background-color: var(--nav-background-color);
+  color: var(--nav-text-color);
+  font-size: var(--font-size);
+  /* Apply font-size */
+  padding: 0.625rem 1.25rem;
+  /* 10px top/bottom, 20px left/right in rem units */
+  font-weight: bold;
+  font-family: var(--font-family);
+  /* Apply font-family */
 }
 
 /* Style for the navigation links */
 nav ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 nav li {
-    display: inline;
-    margin-right: 1.25rem; /* 20px in rem units */
-    padding: 0 0.3125rem; /* 5px in rem units */
+  display: inline;
+  margin-right: 1.25rem;
+  /* 20px in rem units */
+  padding: 0 0.3125rem;
+  /* 5px in rem units */
 }
 
 nav a {
-    text-decoration: none;
-    color: var(--nav-text-color);
-    padding: 0.5rem;
+  text-decoration: none;
+  color: var(--nav-text-color);
+  padding: 0.5rem;
 }
 
 /* Style for the active link in dark mode */
 nav a.active {
-    font-weight: bold;
-    color: var(--nav-active-color); /* Accent color for active link */
+  font-weight: bold;
+  color: var(--nav-active-color);
+  /* Accent color for active link */
 }
 
 /* Navbar styles */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--nav-background-color);
-    color: var(--nav-text-color);
-    padding: 1rem;
-    font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--nav-background-color);
+  color: var(--nav-text-color);
+  padding: 1rem;
+  font-weight: bold;
 }
 
 /* Navigation list styles */
 .navbar-list {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 1rem;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
 }
 
 /* Navigation list items styles */
 .navbar-list li {
-    display: inline;
+  display: inline;
 }
 
 /* Theme toggle button styles */
 .theme-toggle {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 /* Theme toggle button icon styles */
 .theme-toggle i {
-    font-size: 1.5rem; /* Adjust the size of the theme icon */
+  font-size: 1.5rem;
+  /* Adjust the size of the theme icon */
 }
 
 /* Dark mode button styles */
 button {
-    background-color: var(--nav-background-color); /* Use the same background color as the navigation bar */
-    color: var(--nav-text-color);
-    padding: 10px 20px;
-    font-size: var(--font-size); /* Apply font-size */
-    font-weight: bold;
+  background-color: var(--nav-background-color);
+  /* Use the same background color as the navigation bar */
+  color: var(--nav-text-color);
+  padding: 10px 20px;
+  font-size: var(--font-size);
+  /* Apply font-size */
+  font-weight: bold;
 }
 
 
@@ -219,12 +470,14 @@ button {
 }
 
 .profile-content span {
-  flex: 1;  /* Adjust as per requirement to maintain size ratio */
+  flex: 1;
+  /* Adjust as per requirement to maintain size ratio */
   font-weight: bold;
 }
 
 .profile-content input {
-  flex: 2;  /* Adjust as per requirement to maintain size ratio */
+  flex: 2;
+  /* Adjust as per requirement to maintain size ratio */
   padding: 5px;
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -245,8 +498,10 @@ button {
 
 .profile-content button:hover {
   background-color: var(--nav-text-color);
-  color: var(--nav-background-color);  /* Setting text color on hover to ensure contrast */
-  transform: scale(1.05);  /* Slight zoom effect on hover */
+  color: var(--nav-background-color);
+  /* Setting text color on hover to ensure contrast */
+  transform: scale(1.05);
+  /* Slight zoom effect on hover */
 }
 
 button {
@@ -268,101 +523,104 @@ button:hover {
 /* Tablet */
 @media screen and (max-width: 768px) {
   #UserProfileControllerContainer {
-      max-width: 90%;
+    max-width: 90%;
   }
 }
 
 /* Mobile */
 @media screen and (max-width: 480px) {
   #UserProfileControllerContainer {
-      max-width: 100%;
-      padding: 15px;
+    max-width: 100%;
+    padding: 15px;
   }
 }
 
 
- /* login */
+/* login */
 
- .login-container {
-    width: 80%;
-    max-width: 400px;
-    margin: 5% auto;
-    padding: 20px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: var(--font-family);
-    font-weight: var(--font-weight);
-    font-style: var(--font-style);
-    font-size: var(--font-size);
-    border-radius: 10px;
+.login-container {
+  width: 80%;
+  max-width: 400px;
+  margin: 5% auto;
+  padding: 20px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  font-style: var(--font-style);
+  font-size: var(--font-size);
+  border-radius: 10px;
 }
 
 .login-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.login-container label, .login-container input {
-    width: 100%;
-    margin-bottom: 10px;
+.login-container label,
+.login-container input {
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .login-container label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
 .login-container input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    color: var(--text-color);
-    background-color: #f9f9f9; /* A light background */
-    transition: background-color 0.3s;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: var(--text-color);
+  background-color: #f9f9f9;
+  /* A light background */
+  transition: background-color 0.3s;
 }
 
 .login-container input:focus {
-    outline: none;
-    background-color: #e8e8e8; /* Slightly darker background on focus */
+  outline: none;
+  background-color: #e8e8e8;
+  /* Slightly darker background on focus */
 }
 
 
 
 .login-container button {
-    cursor: pointer;
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--nav-active-color);
-    color: var(--text-color);
-    transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--nav-active-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .login-container button:hover {
-    background-color: var(--nav-text-color);
-    color: var(--background-color);
+  background-color: var(--nav-text-color);
+  color: var(--background-color);
 }
 
 /* Laptop/Tablet */
 @media screen and (max-width: 1024px) {
-    .login-container {
-        width: 90%;
-        padding: 15px;
-    }
+  .login-container {
+    width: 90%;
+    padding: 15px;
+  }
 }
 
 /* Mobile */
 @media screen and (max-width: 600px) {
-    .login-container {
-        width: 95%;
-        padding: 10px;
-    }
+  .login-container {
+    width: 95%;
+    padding: 10px;
+  }
 }
 
 
@@ -374,7 +632,7 @@ button:hover {
   max-width: 400px;
   margin: 5% auto;
   padding: 20px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: var(--font-family);
@@ -399,7 +657,8 @@ button:hover {
 .form-row label {
   flex-basis: 30%;
   font-weight: bold;
-  text-align: left; /* Change from 'right' to 'left' alignment */
+  text-align: left;
+  /* Change from 'right' to 'left' alignment */
   margin-right: 10px;
 }
 
@@ -438,16 +697,16 @@ button:hover {
 /* Laptop/Tablet */
 @media screen and (max-width: 1024px) {
   #signup-container {
-      width: 90%;
-      padding: 15px;
+    width: 90%;
+    padding: 15px;
   }
 }
 
 /* Mobile */
 @media screen and (max-width: 600px) {
   #signup-container {
-      width: 95%;
-      padding: 10px;
+    width: 95%;
+    padding: 10px;
   }
 }
 
@@ -464,10 +723,13 @@ button:hover {
 }
 
 .friends-list {
-  width: 320px; /* Set the width to match WhatsApp's user container */
-  max-height: 100%; /* Takes available vertical space */
+  width: 320px;
+  /* Set the width to match WhatsApp's user container */
+  max-height: 100%;
+  /* Takes available vertical space */
   overflow-y: auto;
-  background-color: #f5f5f5; /* Customize as needed */
+  background-color: var(--background-color);
+  /* Customize as needed */
   padding: 10px;
   border-right: 1px solid #ddd;
 }
@@ -482,7 +744,8 @@ button:hover {
 }
 
 .friend-list-item:hover {
-  background-color: #e0e0e0; /* Light gray on hover */
+  background-color: #e0e0e0;
+  /* Light gray on hover */
 }
 
 .profile-pic {
@@ -534,7 +797,7 @@ button:hover {
   flex: 1;
   display: block;
   flex-direction: column;
-  max-height: calc(100vh - 120px);
+  max-height: calc(100vh);
   background-color: var(--background-color);
   border-left: 1px solid #ddd;
 }
@@ -543,16 +806,18 @@ button:hover {
   display: flex;
   align-items: center;
   padding: 10px;
-  background-color: #fff;
+  background-color: var(--background-color);
   border-bottom: 1px solid #ddd;
 }
 
 .active-status {
-  background-color: #000dca; /* Green dot for active status */
+  background-color: #000dca;
+  /* Green dot for active status */
 }
 
 .inactive-status {
-  background-color: #d60e00; /* Red dot for inactive status */
+  background-color: #d60e00;
+  /* Red dot for inactive status */
 }
 
 .chat-messages {
@@ -560,20 +825,32 @@ button:hover {
   list-style-type: none;
   padding: 10px;
   overflow-y: auto;
+  background-color: var(--background-color); /* Use theme background color */
 }
 
 .chat-message {
-  background-color: #fff;
+  background-color: #fff; /* Default background color */
   padding: 8px;
   margin-bottom: 8px;
   border-radius: 5px;
 }
 
+/* Update user message style based on theme */
+.user-message {
+  float: left;
+  clear: both;
+  background-color: var(--background-color); /* Use theme background color */
+  padding: 8px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+/* Chat Input Styles */
 .chat-input {
   display: flex;
   align-items: center;
   padding: 10px;
-  background-color: #fff;
+  background-color: #fff; /* Default background color */
   border-top: 1px solid #ddd;
 }
 
@@ -586,7 +863,7 @@ button:hover {
 }
 
 .send-button {
-  background-color: #4caf50; /* Green send button */
+  background-color: #4caf50; /* Default green color */
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -598,16 +875,17 @@ button:hover {
   background-color: #45a049; /* Darker green on hover */
 }
 
+/* Empty Chat Container Styles */
 .empty-chat-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
-  background-color: #000;
-  color: #fff;
-  font-size: 18px;
-  font-weight: bold;
+  background-color: var(--background-color); /* Use theme background color */
+  color: #fff; /* Default text color */
+  font-size: 18px; /* Default font size */
+  font-weight: bold; /* Default font weight */
 }
 
 .empty-chat-component {
@@ -616,12 +894,12 @@ button:hover {
   margin-top: 20px;
 }
 
-/* Chat Toggle Button */
-hat-toggle-button {
+/* Chat Toggle Button Styles */
+.chat-toggle-button {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #4caf50; /* Green button color */
+  background-color: #4caf50; /* Default green color */
   color: #fff; /* Text color */
   border: none;
   border-radius: 50%;
@@ -641,15 +919,26 @@ hat-toggle-button {
   }
 
   .chat-ui-container {
-    
     flex: 1;
     display: none;
     max-height: calc(100vh);
   }
-  
-  
 }
 
+/* Style for chat message timestamp */
+.chat-message-timestamp {
+  font-size: 12px;
+  color: #888; /* Timestamp color */
+  float: right; /* Align timestamp to the right side */
+}
+
+/* Style for chat message status (default: single tick) */
+.chat-message-status {
+  font-size: 12px;
+  color: #888; /* Status indicator color */
+  float: right; /* Align status to the right side */
+  margin-left: 5px; /* Add some spacing between timestamp and status */
+}
 
 
 
@@ -659,19 +948,21 @@ hat-toggle-button {
 label[for="attachment-input"] {
   display: inline-block;
   padding: 8px 16px;
-  background-color: #007bff; /* Blue color, you can change it */
-  color: #fff; /* White text color */
+  background-color: #007bff;
+  /* Blue color, you can change it */
+  color: #fff;
+  /* White text color */
   cursor: pointer;
   border-radius: 4px;
   transition: background-color 0.3s ease;
 }
 
 label[for="attachment-input"]:hover {
-  background-color: #0056b3; /* Darker blue color on hover */
+  background-color: #0056b3;
+  /* Darker blue color on hover */
 }
 
 /* Hide the file input */
 #attachment-input {
   display: none;
 }
-

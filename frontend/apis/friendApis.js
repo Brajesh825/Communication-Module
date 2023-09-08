@@ -4,18 +4,18 @@ class FriendAPI {
         return [
             {
                 id: 1,
-                name: "Friend 1",
+                name: "Brajesh Mishra",
                 profilePic: "https://www.emmegi.co.uk/wp-content/uploads/2019/01/User-Icon.jpg",
                 publicKey: "publicKey1",
-                lastMessage: "hii",
+                lastMessage: "",
                 status: "active"
             },
             {
                 id: 2,
-                name: "Friend 2",
+                name: "Deepak Joshi",
                 profilePic: "https://www.emmegi.co.uk/wp-content/uploads/2019/01/User-Icon.jpg",
                 publicKey: "publicKey2",
-                lastMessage: "hii",
+                lastMessage: "",
                 status: "InActive"
             },
             // Add more friends as needed

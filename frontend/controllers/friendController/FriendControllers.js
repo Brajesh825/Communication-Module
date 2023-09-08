@@ -24,6 +24,7 @@ class FriendController {
         try {
             const friendService = new FriendService();
             this.friends = await friendService.getFriends();
+            this.store.setFriends(this.friends)
         } catch (error) {
             console.error("FriendController - Load Friends error:", error);
         }
@@ -51,16 +52,6 @@ class FriendController {
         } else {
             // No active friend is set, you can handle this case if needed
         }
-    }
-
-    // Method to update the last message with the active friend
-    updateLastMessage(message) {
-        // Implement this method to update the last message with the active friend
-    }
-
-    // Method to send a message to the active friend
-    sendMessage(message) {
-        // Implement this method to send a message to the active friend
     }
 
     // Method to create a placeholder for the friends component

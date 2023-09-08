@@ -5,7 +5,10 @@ class Database {
         mongoose.connect('mongodb+srv://nodejsDeepak:nodejsDeepak@cluster0.lnx1ekk.mongodb.net/COMmod?', {
             useNewUrlParser: true,
             useUnifiedTopology: true,
-        });
+        }).then(()=> {
+            console.log('conected');
+        })
+
     }
 }
 
