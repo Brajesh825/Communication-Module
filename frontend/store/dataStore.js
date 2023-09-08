@@ -9,6 +9,9 @@ class DataStore {
         this.user = user
         console.log(this.user);
     }
+    getUser(){
+        return this.user
+    }
 
     // Method to search for friends based on a query
     searchFriends(query) {
@@ -30,9 +33,13 @@ class DataStore {
         return this.activeFriend;
     }
 
+    getFriends(){
+        return this.friends
+    }
+
     // Method to set the friends list
     setFriends(friends) {
-        this.friends = friends;
+        this.friends = friends.filter((friend) => friend._id !== this.user._id);
     }
 
     // Method to add a new friend

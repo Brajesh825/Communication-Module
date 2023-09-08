@@ -23,8 +23,9 @@ class FriendController {
     async loadFriends() {
         try {
             const friendService = new FriendService();
-            this.friends = await friendService.getFriends();
-            this.store.setFriends(this.friends)
+            const friends = await friendService.getFriends();            
+
+            this.store.setFriends(friends)
         } catch (error) {
             console.error("FriendController - Load Friends error:", error);
         }
@@ -76,9 +77,10 @@ class FriendController {
     createFriendsComponent() {
         const friendsListContainer = document.createElement("div");
         friendsListContainer.classList.add("friends-list");
+        const friends = this.store.getFriends()
 
         // Loop through the friends and create a list item for each
-        this.friends.forEach((friend) => {
+        friends.forEach((friend) => {
             const friendListItem = document.createElement("div");
             friendListItem.classList.add("friend-list-item");
 
