@@ -78,6 +78,7 @@ export function createNavbar() {
     function toggleNavbar() {
         const ulElement = navElement.querySelector('ul.navbar-list');
         ulElement.classList.toggle('collapsed');
+        hamburgerButton.classList.toggle('open');
     }
 
     // Attach the toggleNavbar function to the hamburger button's click event

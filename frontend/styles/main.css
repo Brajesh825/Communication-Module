@@ -334,6 +334,27 @@ button {
 
 }
 
+.hamburger-button.open{
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  background-color: var(--background-color);
+  color: var(--nav-active-color) ;
+}
+
+.hamburger-button.open .bar:first-child {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger-button.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-button.open .bar:last-child {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+
 .navbar-list.collapsed {
   display: block;
   @media screen and (max-width: 768px) {
@@ -345,7 +366,7 @@ button {
 /* Hamburger bar styles */
 .bar {
   display: block;
-  width: 25px;
+  width: 30px;
   height: 3px;
   background-color: var(--nav-text-color);
   margin: 6px 0;
