@@ -61,6 +61,30 @@ class AuthService {
             throw error;
         }
     }
+
+    async getCurrentUser(req) {
+        const token = req.headers.authorization && req.headers.authorization.split(' ')[1];
+        console.log(token);
+        if (!token) {
+            return null; // No token found
+        }
+
+        try {
+            const decodedToken = jwt.verify(token, "your-secret-key"); // Replace with your JWT secret key
+            const userId = decodedToken.userId;
+
+            // Find the user by their ID and get the important user information
+            const user = await User.findById(userId);
+
+            if (!user) {
+                return null; // User not found
+            }
+
+            return user.getUser(); // Use the getUser method to get important user info
+        } catch (error) {
+            return null; // Token is invalid or expired
+        }
+    }
 }
 
 module.exports = AuthService;

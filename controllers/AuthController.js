@@ -26,6 +26,21 @@ class AuthController {
             res.status(500).json({ error: error.message });
         }
     }
+
+    async getCurrentUser(req, res) {
+        try {
+            const currentUser = await authService.getCurrentUser(req);
+            console.log(currentUser);
+            if (currentUser) {
+                res.status(200).json({ user: currentUser });
+            } else {
+                res.status(401).json({ error: 'Unauthorized' });
+            }
+        } catch (error) {
+            res.status(500).json({ error: error.message });
+        }
+    }
+
 }
 
 module.exports = AuthController;

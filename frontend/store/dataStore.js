@@ -2,6 +2,12 @@ class DataStore {
     constructor() {
         this.friends = []; // Array to store friend objects
         this.activeFriend = null; // Currently active friend
+        this.user = null
+    }
+
+    setUser(user){
+        this.user = user
+        console.log(this.user);
     }
 
     // Method to search for friends based on a query

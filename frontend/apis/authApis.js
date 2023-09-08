@@ -68,11 +68,11 @@ class AuthAPI {
 
             if (!token) {
                 // Token not found, user is not authenticated
-                return { isAuthenticated: false };
+                return {error : "token not found"}
             }
 
             // Perform the actual API request to check the current user's status
-            const response = await fetch("/auth/checkCurrentUser", {
+            const response = await fetch("/auth/getCurrentUser", {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -80,7 +80,9 @@ class AuthAPI {
                 },
             });
 
-            return response.json();
+            let data = await response.json()
+
+            return data;
         } catch (error) {
             console.error("AuthAPI - Check current user error:", error);
             throw error; // Propagate the error

@@ -10,11 +10,11 @@ class CommunicationController{
         this.chatController = new ChatController(this.dataStore)
     }
 
-    async init(){
+    async init(user){
         this.friendController.init()
         this.chatController.init()
         this.friendController.addChatController(this.chatController)
-
+        this.dataStore.setUser(user)
     }
 
     getCommunicationContainer(){
